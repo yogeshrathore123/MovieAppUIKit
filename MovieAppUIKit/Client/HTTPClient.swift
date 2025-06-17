@@ -17,7 +17,7 @@ class HTTPClient {
     func fetchMovies(search: String) -> AnyPublisher<[Movie], Error> {
         
         // Here Pass your OMDB API Key
-        let OMDB_API_KEY = "77ea50fb"
+        let OMDB_API_KEY = ""
         guard let encodedSearch = search.urlEncoded,
                 let url = URL(string: "https://www.omdbapi.com/?s=\(encodedSearch)&page=2&apiKey=\(OMDB_API_KEY)")
         else {
