@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = MovieViewController()
+        window.rootViewController = MovieViewController(viewModel: MovieListViewModel(httpClient: HTTPClient()))
         window.makeKeyAndVisible()
         self.window = window
     }
